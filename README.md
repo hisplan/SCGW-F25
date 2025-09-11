@@ -3,10 +3,10 @@
 ## Setup
 
 ```bash
-conda create -n scgw_f25 python=3.11 pip jupyterlab
+conda create -n scgw_f25 python=3.12 pip jupyterlab
 conda activate scgw_f25
-```
 
-```bash
-pip install numpy pandas matplotlib seaborn scanpy anndata scikit-learn scipy
+conda install -c conda-forge scanpy leidenalg python-igraph scrublet jaxlib jax conda-forge::scvi-tools bioconda::gseapy conda-forge::hnswlib
+
+pip install scimilarity Cython
 ```
