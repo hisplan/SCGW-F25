@@ -46,4 +46,4 @@ We will be using a public dataset from [10x Genomics](https://www.10xgenomics.co
 wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_filtered_feature_bc_matrix.h5
 ```
 
-![Download](./data/pbmc_10k_v3_filtered_feature_bc_matrix.png)
+![Download](./img/pbmc_10k_v3_filtered_feature_bc_matrix.png)
