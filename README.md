@@ -18,7 +18,6 @@ pip install scrublet scimilarity Cython
 
 The following setup instructions were validated on a Windows 11, using Miniconda version 25.7.0.
 
-3.12.7
 ```bash
 conda create -n scgw_f25 python=3.12 pip jupyterlab
 conda activate scgw_f25
