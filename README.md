@@ -10,22 +10,21 @@ The following setup instructions were validated on a Mac with an Apple M2 chip, 
 conda create -n scgw_f25 python=3.12 pip jupyterlab
 conda activate scgw_f25
 
-conda install -c conda-forge scanpy leidenalg python-igraph scrublet jaxlib jax conda-forge::scvi-tools bioconda::gseapy conda-forge::hnswlib
-pip install scimilarity Cython
+conda install -c conda-forge scanpy leidenalg python-igraph jaxlib jax conda-forge::scvi-tools bioconda::gseapy conda-forge::hnswlib conda-forge::python-annoy
+pip install scrublet scimilarity Cython
 ```
 
 ### Windows
 
 The following setup instructions were validated on a Windows 11, using Miniconda version 25.7.0.
 
+3.12.7
 ```bash
 conda create -n scgw_f25 python=3.12 pip jupyterlab
 conda activate scgw_f25
 
-conda install -c conda-forge scanpy leidenalg python-igraph scrublet jaxlib jax conda-forge::hnswlib
-pip install gseapy
-pip install scvi-tools
-pip install scimilarity Cython
+conda install -c conda-forge scanpy leidenalg python-igraph scrublet jaxlib jax conda-forge::hnswlib conda-forge::python-annoy
+pip install scrublet gseapy scvi-tools scimilarity Cython
 ```
 
 ### Verify Installation
