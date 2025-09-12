@@ -11,7 +11,7 @@ For a smooth installation, ensure that your machine is running Miniconda version
 The following setup instructions were validated on a Mac with an Apple M2 chip, using Miniconda version `25.5.1`.
 
 ```bash
-conda create -n scgw_f25 python=3.12 pip jupyterlab
+conda create -n scgw_f25 python=3.12 pip jupyterlab -y
 conda activate scgw_f25
 
 conda install -c conda-forge scanpy leidenalg python-igraph jaxlib jax conda-forge::scvi-tools bioconda::gseapy conda-forge::hnswlib conda-forge::python-annoy
@@ -23,7 +23,7 @@ pip install scrublet scimilarity Cython
 The following setup instructions were validated on a Windows 11, using Miniconda version `25.7.0`.
 
 ```bash
-conda create -n scgw_f25 python=3.12 pip jupyterlab
+conda create -n scgw_f25 python=3.12 pip jupyterlab -y
 conda activate scgw_f25
 
 conda install -c conda-forge scanpy leidenalg python-igraph jaxlib jax conda-forge::hnswlib conda-forge::python-annoy
