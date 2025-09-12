@@ -23,7 +23,7 @@ The following setup instructions were validated on a Windows 11, using Miniconda
 conda create -n scgw_f25 python=3.12 pip jupyterlab
 conda activate scgw_f25
 
-conda install -c conda-forge scanpy leidenalg python-igraph scrublet jaxlib jax conda-forge::hnswlib conda-forge::python-annoy
+conda install -c conda-forge scanpy leidenalg python-igraph jaxlib jax conda-forge::hnswlib conda-forge::python-annoy
 pip install scrublet gseapy scvi-tools scimilarity Cython
 ```
 
