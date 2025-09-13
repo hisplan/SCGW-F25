@@ -4,6 +4,8 @@
 
 ### Prerequisites
 
+If you have Annaconda or Python from python.org installed, please uninstall them and use Miniconda instead to avoid potential conflicts.
+
 For a smooth installation, ensure that your machine is running Miniconda version `25.5.1` or later.
 
 ### Mac
