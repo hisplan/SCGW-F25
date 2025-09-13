@@ -1,5 +1,7 @@
 # Single Cell Genomics Workshop F2025
 
+"평균의 종말, 세포 하나의 이야기를 듣다"
+
 ## Setup
 
 ### Prerequisites
