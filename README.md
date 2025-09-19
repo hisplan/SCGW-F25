@@ -13,7 +13,7 @@ If you have Annaconda or Python from python.org installed, please uninstall them
 
 For a smooth installation, ensure that your machine is running Miniconda version `25.5.1` or later.
 
-### Mac
+### Mac (Apple Silicon)
 
 The following setup instructions were validated on a Mac with an Apple M2 chip, using Miniconda version `25.5.1`.
 
@@ -24,6 +24,10 @@ conda activate scgw_f25
 conda install -c conda-forge scanpy=1.11.4 leidenalg=0.10.2 python-igraph=0.11.9 jaxlib=0.5.3 jax=0.5.3 conda-forge::scvi-tools=1.3.3 bioconda::gseapy=1.1.9 conda-forge::hnswlib=0.8.0 conda-forge::python-annoy=1.17.3
 pip install scikit-misc==0.5.1 scrublet==0.2.3 scimilarity==0.4.1 Cython==3.1.3
 ```
+
+## Mac (Intel)
+
+TBA
 
 ### Windows
 
