@@ -58,3 +58,12 @@ wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_f
 ```
 
 ![Download](./img/pbmc_10k_v3_filtered_feature_bc_matrix.png)
+
+## SCimilarity Model
+
+Session 3 will utilize a pre-trained SCimilarity model for cell type annotation. The model can be downloaded from [Zenodo](https://zenodo.org/records/10685499). You can use `wget` to download the model from the command line.
+
+```bash
+wget https://zenodo.org/records/10685499/files/model_v1.1.tar.gz
+tar -xzvf model_v1.1.tar.gz
+```
