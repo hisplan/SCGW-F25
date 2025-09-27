@@ -67,3 +67,8 @@ Session 3 will utilize a pre-trained SCimilarity model for cell type annotation.
 wget https://zenodo.org/records/10685499/files/model_v1.1.tar.gz
 tar -xzvf model_v1.1.tar.gz
 ```
+
+## Visualization Playground
+
+- UMAP: https://pair-code.github.io/understanding-umap/
+- tSNE: https://distill.pub/2016/misread-tsne/
