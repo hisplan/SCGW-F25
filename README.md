@@ -22,7 +22,7 @@ conda create -n scgw_f25 python=3.12 pip jupyterlab -y
 conda activate scgw_f25
 
 conda install -c conda-forge scanpy=1.11.4 leidenalg=0.10.2 python-igraph=0.11.9 jaxlib=0.5.3 jax=0.5.3 conda-forge::scvi-tools=1.3.3 bioconda::gseapy=1.1.9 conda-forge::hnswlib=0.8.0 conda-forge::python-annoy=1.17.3
-pip install scikit-misc==0.5.1 celltypist==1.7.1 scrublet==0.2.3 scimilarity==0.4.1 Cython==3.1.3
+pip install harmonypy==0.0.10 scib-metrics==0.5.7 scikit-misc==0.5.1 celltypist==1.7.1 scrublet==0.2.3 scimilarity==0.4.1 Cython==3.1.3
 ```
 
 ## Mac (Intel)
@@ -38,7 +38,7 @@ conda create -n scgw_f25 python=3.12 pip jupyterlab -y
 conda activate scgw_f25
 
 conda install -c conda-forge scanpy leidenalg python-igraph jaxlib jax conda-forge::hnswlib conda-forge::python-annoy
-pip install scikit-misc==0.5.1 celltypist==1.7.1 scrublet gseapy scvi-tools scimilarity Cython
+pip install harmonypy==0.0.10 scib-metrics==0.5.7 scikit-misc==0.5.1 celltypist==1.7.1 scrublet gseapy scvi-tools scimilarity Cython
 ```
 
 ### Verify Installation
@@ -95,4 +95,17 @@ https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM6005304
 
 ```bash
 curl -L -o GSM6005304_BM_CD34_Rep2_filtered_feature_bc_matrix.h5 "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM6005304&format=file&file=GSM6005304%5FBM%5FCD34%5FRep2%5Ffiltered%5Ffeature%5Fbc%5Fmatrix%2Eh5"
+```
+
+#### Batch-effect Removal Benchmarking
+
+Download four files from the following link and unzip them:
+
+https://github.com/JinmiaoChenLab/Batch-effect-removal-benchmarking/tree/master/Data/dataset5
+
+```bash
+b1_celltype.txt
+b1_exprs.txt
+b2_celltype.txt
+b2_exprs.txt
 ```
