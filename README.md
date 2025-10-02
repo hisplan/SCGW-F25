@@ -49,7 +49,11 @@ Please run the following command and ensure that each item is successfully verif
 python check_env.py
 ```
 
-## Sample Dataset
+## Data and Supplementary Resources
+
+### Session 1
+
+#### Sample Dataset
 
 We will be using a public dataset from [10x Genomics](https://www.10xgenomics.com/datasets/10-k-pbm-cs-from-a-healthy-donor-v-3-chemistry-3-standard-3-0-0) that contains about 11 thousand peripheral blood mononuclear cells (PBMCs) from a healthy donor. The dataset can be downloaded from [here](https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_filtered_feature_bc_matrix.h5). You can also use `wget` or `curl` to download the file from the command line.
 
@@ -59,7 +63,9 @@ wget https://cf.10xgenomics.com/samples/cell-exp/3.0.0/pbmc_10k_v3/pbmc_10k_v3_f
 
 ![Download](./img/pbmc_10k_v3_filtered_feature_bc_matrix.png)
 
-## SCimilarity Model
+### Session 3
+
+#### SCimilarity Model
 
 Session 3 will utilize a pre-trained SCimilarity model for cell type annotation. The model can be downloaded from [Zenodo](https://zenodo.org/records/10685499). You can use `wget` to download the model from the command line.
 
@@ -68,7 +74,7 @@ wget https://zenodo.org/records/10685499/files/model_v1.1.tar.gz
 tar -xzvf model_v1.1.tar.gz
 ```
 
-## Visualization Playground
+#### Visualization Playground
 
 - UMAP: https://pair-code.github.io/understanding-umap/
 - tSNE: https://distill.pub/2016/misread-tsne/
