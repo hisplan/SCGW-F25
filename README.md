@@ -78,3 +78,21 @@ tar -xzvf model_v1.1.tar.gz
 
 - UMAP: https://pair-code.github.io/understanding-umap/
 - tSNE: https://distill.pub/2016/misread-tsne/
+
+### Session 4
+
+#### CD34 Rep1 Multiome (RNA)
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM6005304
+
+```bash
+curl -L -o GSM6005302_BM_CD34_Rep1_filtered_feature_bc_matrix.h5 "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM6005302&format=file&file=GSM6005302%5FBM%5FCD34%5FRep1%5Ffiltered%5Ffeature%5Fbc%5Fmatrix%2Eh5"
+```
+
+#### CD34 Rep2 Multiome (RNA)
+
+https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM6005304
+
+```bash
+curl -L -o GSM6005304_BM_CD34_Rep2_filtered_feature_bc_matrix.h5 "https://www.ncbi.nlm.nih.gov/geo/download/?acc=GSM6005304&format=file&file=GSM6005304%5FBM%5FCD34%5FRep2%5Ffiltered%5Ffeature%5Fbc%5Fmatrix%2Eh5"
+```
