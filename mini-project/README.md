@@ -19,7 +19,7 @@ The goal is to analyze single-cell transcriptomics data from breast cancer patie
 **Task:** Download the raw count matrices and any necessary metadata from the study associated with PMC8508335.
 
 **Output:**
-* A brief description of where the data was located and the format of the downloaded files (e.g., `.mtx` file, `barcodes.tsv`, `features.tsv`).
+* A brief description of where the data was located and the format of the downloaded files (e.g., `.mtx`, `barcodes.tsv`, `features.tsv`).
 * The code or steps used to load the data into the chosen scRNA-seq analysis environment (e.g. AnnData object using Scanpy).
 
 ***
@@ -39,7 +39,6 @@ The goal is to analyze single-cell transcriptomics data from breast cancer patie
 **Output:**
 * A summary table of QC metrics before and after filtering.
 * A **UMAP plot** of the clustered cells, with each cluster clearly distinguishable by color, labeled with its assigned cluster number (0-N).
-* **Identify the CTC Cluster:** By visually comparing your generated UMAP plot with Figure 4 from the original paper, identify which of your clusters corresponds to the Circulating Tumor Cells (CTCs) (highlighted in the red box, labeled as **Cluster 10** in the paper's figure).
 
 ***
 
@@ -49,12 +48,15 @@ The goal is to analyze single-cell transcriptomics data from breast cancer patie
 
 1.  **Marker Identification:** Perform **Differential Expression (DE)** analysis to find **cluster-specific marker genes** for *all* clusters, especially the identified CTC cluster.
 2.  **Cell Type Annotation:** Assign an identity (e.g., T Cells, Monocytes, CTCs) to each cluster based on the expression of known lineage markers (e.g., *CD3D/CD3E* for T cells, *CD14/LYZ* for Monocytes, and epithelial markers for CTCs, as discussed in the workshop and paper).
+3. Draw a UMAP plot highlighting the putative CTC cluster and other non-CTC clusters.
 
 **Output:**
 * A list of the top 5-10 differentially expressed marker genes for the putative CTC cluster, and for a major immune cell cluster (e.g., T Cells).
 * An explanation of the logic used to annotate the CTC cluster, citing key marker genes. **Classical CTC definition markers** (*EPCAM*, Cytokeratins, absence of *PTPRC/CD45*) should be checked, as well as the unique markers identified in the study.
 * A **Violin Plot** demonstrating the expression level of key CTC markers (e.g., *EPCAM*, *CLDN7*, *TACSTD2*, *MGP*) across all clusters. This should aim to reproduce the characteristic expression pattern shown in Figure 6.
     * *Self-Correction/Critical Thinking:* Compare your results to the genes listed in the paper and discuss any similarities or discrepancies.
+
+![UMAP](./figures/fig-umap-annotated.png)
 
 ![Barplot](./figures/fig-violin.png)
 
@@ -69,7 +71,7 @@ The goal is to analyze single-cell transcriptomics data from breast cancer patie
 
 **Output:**
 * A list of the **top 20 most significantly upregulated genes** in the CTC cluster (based on high $\text{logFC}$ and low adjusted $p$-value).
-* The generated visualization (volcano plot or heatmap).
+* The generated visualization (volcano plot and/or heatmap).
 * A discussion on the biological function or significance of a few of the most highly expressed, novel genes found in the CTC cluster, potentially suggesting why they might be important for CTC biology (e.g., cell adhesion, survival, or metastasis).
 
 ***
