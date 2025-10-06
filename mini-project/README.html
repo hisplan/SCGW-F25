@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>README.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({ tex2jax: {inlineMath: [['$', '$']]}, messageStyle: "none" });
+</script>
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<p><em>Copyright Notice</em></p>
+<p>Jaeyoung Chun | School of Applied Artificial Intelligence | Handong Global University</p>
+<h2 id="mini-project-single-cell-transcriptomic-analysis-of-circulating-tumor-cell-heterogeneity">Mini-Project: Single-Cell Transcriptomic Analysis of Circulating Tumor Cell Heterogeneity</h2>
+<p>This mini-project is designed to apply the single-cell RNA sequencing (scRNA-seq) analysis concepts and methods learned in this workshop to a real-world biological problem: characterizing the heterogeneity of Circulating Tumor Cells (CTCs) in breast cancer. CTCs are of critical importance as they are the cellular link between the primary tumor and distant metastasis.</p>
+<p>The project is based on the study: <strong>&quot;Heterogeneity of Circulating Tumor Cell Neoplastic Subpopulations Outlined by Single-Cell Transcriptomics&quot;</strong> (PMCID: PMC8508335  PMID: 34638368).</p>
+<p>Link: https://pmc.ncbi.nlm.nih.gov/articles/PMC8508335/</p>
+<p>The goal is to analyze single-cell transcriptomics data from breast cancer patients, which includes both CTCs and various peripheral blood mononuclear cells (PBMCs), to identify the CTC population, characterize its gene expression profile, and explore its heterogeneity.</p>
+<hr>
+<h3 id="1-data-acquisition-and-initial-processing">1. Data Acquisition and Initial Processing</h3>
+<p><strong>Task:</strong> Download the raw count matrices and any necessary metadata from the study associated with PMC8508335.</p>
+<p><strong>Output:</strong></p>
+<ul>
+<li>A brief description of where the data was located and the format of the downloaded files (e.g., <code>.mtx</code>, <code>barcodes.tsv</code>, <code>features.tsv</code>).</li>
+<li>The code or steps used to load the data into the chosen scRNA-seq analysis environment (e.g. AnnData object using Scanpy).</li>
+</ul>
+<hr>
+<h3 id="2-dimensionality-reduction-and-cell-clustering">2. Dimensionality Reduction and Cell Clustering</h3>
+<p><strong>Task:</strong> Process the raw data through the standard scRNA-seq pipeline to visualize the cell populations.</p>
+<ol>
+<li><strong>Quality Control (QC):</strong> Filter cells based on metrics like minimum and maximum gene counts, total UMI counts, and mitochondrial gene percentage. Justify the chosen thresholds.</li>
+<li><strong>Normalization and Scaling:</strong> Normalize the raw counts (e.g., $\log$-normalization) and scale the data.</li>
+<li><strong>Highly Variable Genes (HVGs) Selection:</strong> Identify HVGs to focus on the most informative genes.</li>
+<li><strong>Dimensionality Reduction:</strong> Perform <strong>Principal Component Analysis (PCA)</strong> to reduce dimensions, followed by <strong>Uniform Manifold Approximation and Projection (UMAP)</strong> for 2D visualization.</li>
+<li><strong>Clustering:</strong> Apply a graph-based clustering algorithm (e.g., Louvain or Leiden) to group cells into distinct clusters.</li>
+</ol>
+<p><img src="./figures/fig-umap.png" alt="UMAP"></p>
+<p><strong>Output:</strong></p>
+<ul>
+<li>A summary table of QC metrics before and after filtering.</li>
+<li>A <strong>UMAP plot</strong> of the clustered cells, with each cluster clearly distinguishable by color, labeled with its assigned cluster number (0-N).</li>
+</ul>
+<hr>
+<h3 id="3-cell-type-annotation-and-differential-expression">3. Cell Type Annotation and Differential Expression</h3>
+<p><strong>Task:</strong> Annotate the identified clusters with cell types, with a specific focus on the CTC cluster.</p>
+<ol>
+<li><strong>Marker Identification:</strong> Perform <strong>Differential Expression (DE)</strong> analysis to find <strong>cluster-specific marker genes</strong> for <em>all</em> clusters, especially the identified CTC cluster.</li>
+<li><strong>Cell Type Annotation:</strong> Assign an identity (e.g., T Cells, Monocytes, CTCs) to each cluster based on the expression of known lineage markers (e.g., <em>CD3D/CD3E</em> for T cells, <em>CD14/LYZ</em> for Monocytes, and epithelial markers for CTCs, as discussed in the workshop and paper).</li>
+<li>Draw a UMAP plot highlighting the putative CTC cluster and other non-CTC clusters.</li>
+</ol>
+<p><strong>Output:</strong></p>
+<ul>
+<li>A list of the top 5-10 differentially expressed marker genes for the putative CTC cluster, and for a major immune cell cluster (e.g., T Cells).</li>
+<li>An explanation of the logic used to annotate the CTC cluster, citing key marker genes. <strong>Classical CTC definition markers</strong> (<em>EPCAM</em>, Cytokeratins, absence of <em>PTPRC/CD45</em>) should be checked, as well as the unique markers identified in the study.</li>
+<li>A <strong>Violin Plot</strong> demonstrating the expression level of key CTC markers (e.g., <em>EPCAM</em>, <em>CLDN7</em>, <em>TACSTD2</em>, <em>MGP</em>) across all clusters. This should aim to reproduce the characteristic expression pattern shown in Figure 6.
+<ul>
+<li><em>Self-Correction/Critical Thinking:</em> Compare your results to the genes listed in the paper and discuss any similarities or discrepancies.</li>
+</ul>
+</li>
+</ul>
+<p><img src="./figures/fig-umap-annotated.png" alt="UMAP"></p>
+<p><img src="./figures/fig-violin.png" alt="Barplot"></p>
+<hr>
+<h3 id="4-characterization-of-ctc-gene-expression-signature">4. Characterization of CTC Gene Expression Signature</h3>
+<p><strong>Task:</strong> Define the set of genes that distinguish the CTC population from the non-tumor/immune cells.</p>
+<ol>
+<li><strong>Define Signature Genes:</strong> Perform a $\text{log}_2$-fold change ($\text{logFC}$) and adjusted $p$-value-based differential expression analysis to find genes significantly upregulated in the <strong>CTC cluster</strong> compared to <strong>all other cell clusters combined</strong> (non-CTCs).</li>
+<li><strong>Visualization:</strong> Generate a <strong>volcano plot</strong> or a <strong>heatmap</strong> to visualize the differentially expressed genes (DEGs) between CTCs and non-CTCs.</li>
+</ol>
+<p><strong>Output:</strong></p>
+<ul>
+<li>A list of the <strong>top 20 most significantly upregulated genes</strong> in the CTC cluster (based on high $\text{logFC}$ and low adjusted $p$-value).</li>
+<li>The generated visualization (volcano plot and/or heatmap).</li>
+<li>A discussion on the biological function or significance of a few of the most highly expressed, novel genes found in the CTC cluster, potentially suggesting why they might be important for CTC biology (e.g., cell adhesion, survival, or metastasis).</li>
+</ul>
+<hr>
+<h3 id="submission-and-presentation">Submission and Presentation</h3>
+<p>Students will submit a report containing all generated plots, tables, code snippets, and explanations for each section. An optional five-minute presentation of the findings could also be requested. This project will test the student's ability to execute a full scRNA-seq workflow and critically interpret the biological results.</p>
+
+</body>
+</html>
